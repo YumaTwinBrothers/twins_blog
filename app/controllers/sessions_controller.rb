@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
 
   def destroy
      session[:user_id] = nil
+     # if destory is called, session[:user_id] will be nil. it means will be kicked out of "logged_in?"
      flash[:success] = "You have logged out"
      redirect_to root_path
   end
