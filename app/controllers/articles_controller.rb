@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
-  before_action :require_user, except: [:index, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show] # unless user log in, this user can't creaate, edit, update and delete articles
+  before_action :require_same_user, only: [:edit, :update, :destroy] # unless user is current, this user can't creaate, edit, update and delete articles
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
