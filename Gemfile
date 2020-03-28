@@ -12,6 +12,7 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'rails-controller-testing'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
